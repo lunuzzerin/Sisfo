@@ -33,12 +33,28 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
+		//Bootstrap --
+		echo $this->Html->css('bootstrap.min');
+
+		//Jquery
+		echo $this->Html->css('//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css');
+		echo $this->Html->css('/resources/demos/style.css');
+		//echo $this->Html->js('bootstrap.min.js');
 	?>
+
+  	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<script>
+	$( function() {
+		$( "#datepicker" ).datepicker();
+	} );
+	</script>
 </head>
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'https://cakephp.org'); ?></h1>
+			<h1><?php //echo $this->Html->link($cakeDescription, 'https://cakephp.org'); ?></h1>
 		</div>
 		<div id="content">
 
